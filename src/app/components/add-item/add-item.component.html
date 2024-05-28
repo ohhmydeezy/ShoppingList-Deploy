@@ -1,0 +1,18 @@
+<div class="container">
+    <h1 class="mb-3">Add Item</h1>
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="addItem()">
+                <div class="mb-3">
+                    <label for="item" class="form-label">Item:</label>
+                    <input type="text" class="form-control" id="item" name="item" [(ngModel)]="addItemRequest.item" required>
+                </div>
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" id="quantity" name="quantity" [(ngModel)]="addItemRequest.quantity" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+        </div>
+    </div>
+</div>
